@@ -1,0 +1,8 @@
+{
+  "type": "claim",
+  "id": "CL-001",
+  "claimText": "The device is located in Room A",
+  "assertedBy": "Sensor#A",
+  "assertedAt": "2026-01-18T09:55:00Z",
+  "context": "Thread#T-1"
+}

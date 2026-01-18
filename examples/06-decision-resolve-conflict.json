@@ -1,0 +1,10 @@
+{
+  "type": "decision",
+  "id": "D-002",
+  "decisionType": "override",
+  "subjectRefs": ["C-001"],
+  "decidedBy": "Agent#Coordinator",
+  "rationale": "Sensor A calibrated more recently",
+  "decidedAt": "2026-01-18T10:00:00Z",
+  "context": "Thread#T-1"
+}

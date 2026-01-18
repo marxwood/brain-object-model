@@ -1,0 +1,8 @@
+{
+  "type": "task",
+  "id": "TK-001",
+  "assignedTo": "Agent#Runner",
+  "objective": "Move device to Room B",
+  "createdAt": "2026-01-18T10:12:00Z",
+  "status": "open"
+}

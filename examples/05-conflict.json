@@ -1,0 +1,7 @@
+{
+  "type": "conflict",
+  "id": "C-001",
+  "conflictingRefs": ["CL-001", "CL-002"],
+  "detectedAt": "2026-01-18T09:58:00Z",
+  "context": "Thread#T-1"
+}

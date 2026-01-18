@@ -1,0 +1,8 @@
+{
+  "type": "fact",
+  "id": "F-001",
+  "derivedFrom": ["CL-001"],
+  "verifiedBy": "Agent#Verifier",
+  "verifiedAt": "2026-01-18T10:05:00Z",
+  "context": "Thread#T-1"
+}

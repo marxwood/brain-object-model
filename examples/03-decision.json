@@ -1,0 +1,10 @@
+{
+  "type": "decision",
+  "id": "D-001",
+  "decisionType": "select",
+  "subjectRefs": ["F-001"],
+  "decidedBy": "Agent#Coordinator",
+  "rationale": "Fact verified by trusted agent",
+  "decidedAt": "2026-01-18T10:10:00Z",
+  "context": "Thread#T-1"
+}
