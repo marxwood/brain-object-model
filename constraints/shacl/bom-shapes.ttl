@@ -1,0 +1,158 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+@prefix bom: <urn:brain-object-model:> .
+
+# -----------------------------------------------------------------------------
+# Brain Object Model (BOM) — SHACL Shapes (v0.1)
+#
+# Purpose:
+# - Provide machine-checkable validation for BOM payload graphs.
+# - Enforce key epistemic constraints (typed objects, required fields, enums).
+#
+# Notes:
+# - These shapes are intentionally minimal.
+# - They validate structure, not truth.
+# - Implementations may add stricter shapes, but must not weaken core constraints.
+# -----------------------------------------------------------------------------
+
+# -----------------------------------------------------------------------------
+# StateAssertion
+# -----------------------------------------------------------------------------
+bom:StateAssertionShape a sh:NodeShape ;
+  sh:targetClass bom:StateAssertion ;
+  sh:property [ sh:path bom:id ; sh:datatype xsd:string ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:subject ; sh:datatype xsd:string ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:predicate ; sh:datatype xsd:string ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:object ; sh:datatype xsd:string ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:context ; sh:datatype xsd:string ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:provenance ; sh:datatype xsd:string ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:epistemicStatus ;
+                sh:datatype xsd:string ;
+                sh:in ("perception" "inference" "assumption" "action") ;
+                sh:minCount 1 ] ;
+  sh:property [ sh:path bom:validityRef ; sh:datatype xsd:string ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:visibility ;
+                sh:datatype xsd:string ;
+                sh:in ("private" "shared" "public") ;
+                sh:minCount 1 ] ;
+  sh:property [ sh:path bom:createdAt ; sh:datatype xsd:dateTime ; sh:minCount 1 ] .
+
+# -----------------------------------------------------------------------------
+# Validity
+# -----------------------------------------------------------------------------
+bom:ValidityShape a sh:NodeShape ;
+  sh:targetClass bom:Validity ;
+  sh:property [ sh:path bom:id ; sh:datatype xsd:string ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:subjectRef ; sh:datatype xsd:string ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:contextRef ; sh:datatype xsd:string ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:mode ;
+                sh:datatype xsd:string ;
+                sh:in ("until_time" "until_event" "until_changed") ;
+                sh:minCount 1 ] ;
+  sh:property [ sh:path bom:validFrom ; sh:datatype xsd:dateTime ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:status ;
+                sh:datatype xsd:string ;
+                sh:in ("allowed" "expired" "revoked" "superseded") ;
+                sh:minCount 1 ] .
+
+# -----------------------------------------------------------------------------
+# Claim
+# -----------------------------------------------------------------------------
+bom:ClaimShape a sh:NodeShape ;
+  sh:targetClass bom:Claim ;
+  sh:property [ sh:path bom:id ; sh:datatype xsd:string ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:subject ; sh:datatype xsd:string ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:predicate ; sh:datatype xsd:string ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:object ; sh:datatype xsd:string ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:context ; sh:datatype xsd:string ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:assertedAt ; sh:datatype xsd:dateTime ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:provenance ; sh:datatype xsd:string ; sh:minCount 1 ] .
+
+# -----------------------------------------------------------------------------
+# Fact
+# -----------------------------------------------------------------------------
+bom:FactShape a sh:NodeShape ;
+  sh:targetClass bom:Fact ;
+  sh:property [ sh:path bom:id ; sh:datatype xsd:string ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:derivedFrom ; sh:datatype xsd:string ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:verificationMethod ; sh:datatype xsd:string ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:verifiedAt ; sh:datatype xsd:dateTime ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:acceptedAt ; sh:datatype xsd:dateTime ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:provenance ; sh:datatype xsd:string ; sh:minCount 1 ] .
+
+# -----------------------------------------------------------------------------
+# Decision
+# -----------------------------------------------------------------------------
+bom:DecisionShape a sh:NodeShape ;
+  sh:targetClass bom:Decision ;
+  sh:property [ sh:path bom:id ; sh:datatype xsd:string ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:context ; sh:datatype xsd:string ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:decisionType ;
+                sh:datatype xsd:string ;
+                sh:in ("select" "approve" "reject" "override" "conclude") ;
+                sh:minCount 1 ] ;
+  sh:property [ sh:path bom:decidedBy ; sh:datatype xsd:string ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:rationale ; sh:datatype xsd:string ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:decidedAt ; sh:datatype xsd:dateTime ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:provenance ; sh:datatype xsd:string ; sh:minCount 1 ] .
+
+# -----------------------------------------------------------------------------
+# Conflict
+# -----------------------------------------------------------------------------
+bom:ConflictShape a sh:NodeShape ;
+  sh:targetClass bom:Conflict ;
+  sh:property [ sh:path bom:id ; sh:datatype xsd:string ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:context ; sh:datatype xsd:string ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:detectedAt ; sh:datatype xsd:dateTime ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:conflictingRef ; sh:datatype xsd:string ; sh:minCount 2 ] .
+
+# -----------------------------------------------------------------------------
+# Episode
+# -----------------------------------------------------------------------------
+bom:EpisodeShape a sh:NodeShape ;
+  sh:targetClass bom:Episode ;
+  sh:property [ sh:path bom:id ; sh:datatype xsd:string ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:startedAt ; sh:datatype xsd:dateTime ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:context ; sh:datatype xsd:string ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:provenance ; sh:datatype xsd:string ; sh:minCount 1 ] .
+
+# -----------------------------------------------------------------------------
+# Thread
+# -----------------------------------------------------------------------------
+bom:ThreadShape a sh:NodeShape ;
+  sh:targetClass bom:Thread ;
+  sh:property [ sh:path bom:id ; sh:datatype xsd:string ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:openedAt ; sh:datatype xsd:dateTime ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:openedBy ; sh:datatype xsd:string ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:scope ; sh:datatype xsd:string ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:status ;
+                sh:datatype xsd:string ;
+                sh:in ("active" "paused" "closed") ;
+                sh:minCount 1 ] .
+
+# -----------------------------------------------------------------------------
+# Task
+# -----------------------------------------------------------------------------
+bom:TaskShape a sh:NodeShape ;
+  sh:targetClass bom:Task ;
+  sh:property [ sh:path bom:id ; sh:datatype xsd:string ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:assignedTo ; sh:datatype xsd:string ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:createdAt ; sh:datatype xsd:dateTime ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:objective ; sh:datatype xsd:string ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:status ;
+                sh:datatype xsd:string ;
+                sh:in ("todo" "doing" "blocked" "done" "canceled" "open") ;
+                sh:minCount 1 ] .
+
+# -----------------------------------------------------------------------------
+# Question
+# -----------------------------------------------------------------------------
+bom:QuestionShape a sh:NodeShape ;
+  sh:targetClass bom:Question ;
+  sh:property [ sh:path bom:id ; sh:datatype xsd:string ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:askedBy ; sh:datatype xsd:string ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:askedAt ; sh:datatype xsd:dateTime ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:questionText ; sh:datatype xsd:string ; sh:minCount 1 ] ;
+  sh:property [ sh:path bom:context ; sh:datatype xsd:string ; sh:minCount 1 ] .
