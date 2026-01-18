@@ -63,3 +63,17 @@ BOM semantics are never downgraded to fit an ontology.
 
 This is a **living specification**.
 Implementation is intentionally out of scope.
+
+
+---
+
+## Canon & ADR-0 Compatibility
+
+Brain Object Model is a **derivative specification** aligned with the
+System Momentum Canon and constrained by **ADR-0 (Epistemic Constraints)**.
+
+- Canon and ADR-0 are authoritative.
+- BOM operationalizes these constraints as enforceable structure.
+- In case of conflict, Canon and ADR-0 prevail.
+
+See: `governance/adr0-compatibility.md`
