@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "prov": "http://www.w3.org/ns/prov#"
+  },
+  "@type": "Thing",
+  "@id": "urn:state:current-location",
+  "name": "Current device location",
+  "description": "Transient assumed state of the device location",
+  "prov:generatedAtTime": "2026-01-18T09:55:00Z",
+  "prov:wasAssociatedWith": {
+    "@type": "SoftwareApplication",
+    "name": "SensorAgent"
+  }
+}

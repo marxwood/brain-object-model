@@ -1,0 +1,16 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "prov": "http://www.w3.org/ns/prov#"
+  },
+  "@type": "Action",
+  "@id": "urn:decision:select-location",
+  "name": "Select verified device location",
+  "description": "Decision taken based on verified fact",
+  "agent": {
+    "@type": "SoftwareApplication",
+    "name": "CoordinatorAgent"
+  },
+  "prov:generatedAtTime": "2026-01-18T10:10:00Z",
+  "prov:wasDerivedFrom": "urn:fact:F-001"
+}

@@ -1,0 +1,16 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "prov": "http://www.w3.org/ns/prov#"
+  },
+  "@type": "Event",
+  "@id": "urn:episode:chat-session-1",
+  "name": "Chat interaction episode",
+  "startDate": "2026-01-18T09:00:00Z",
+  "endDate": "2026-01-18T10:30:00Z",
+  "prov:generatedAtTime": "2026-01-18T10:30:00Z",
+  "prov:wasAssociatedWith": {
+    "@type": "Person",
+    "name": "User"
+  }
+}
