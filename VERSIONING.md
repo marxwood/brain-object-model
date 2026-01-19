@@ -1,15 +1,15 @@
 # Versioning Policy
 
-This document defines the versioning rules for the **Brain Object Model (BOM)** specification.
+This document defines the versioning rules for the **Institutional Memory Model (IMM)** specification.
 
-BOM is a **specification**, not an implementation.
+IMM is a **specification**, not an implementation.
 Versioning reflects changes to **conceptual contracts**, not code.
 
 ---
 
 ## Version Format
 
-BOM uses the following format:
+IMM uses the following format:
 
 ```
 v<MAJOR>.<MINOR>

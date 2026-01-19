@@ -1,6 +1,6 @@
 # Scope
 
-This document defines the explicit scope of the Brain Object Model (BOM).
+This document defines the explicit scope of the Institutional Memory Model (IMM).
 
 ---
 
@@ -26,7 +26,7 @@ This document defines the explicit scope of the Brain Object Model (BOM).
 
 ## Non-Goals
 
-BOM does NOT attempt to:
+IMM does NOT attempt to:
 - replace databases or APIs
 - define execution runtimes
 - solve trust or alignment automatically

@@ -2,7 +2,7 @@
 
 ## 1. Purpose
 
-This document defines **semantic alignment** between Brain Object Model
+This document defines **semantic alignment** between Institutional Memory Model
 and schema.org vocabulary for interoperability.
 
 Schema.org is used as a **lingua franca**, not as a truth model.
@@ -11,15 +11,15 @@ Schema.org is used as a **lingua franca**, not as a truth model.
 
 ## 2. Mapping Principles
 
-- BOM objects map to schema.org *types*, not pages
+- IMM objects map to schema.org *types*, not pages
 - Mapping is lossy by design
-- BOM remains authoritative
+- IMM remains authoritative
 
 ---
 
 ## 3. Core Mappings
 
-| BOM Object | schema.org Type |
+| IMM Object | schema.org Type |
 |-----------|----------------|
 | Entity    | Thing          |
 | Person   | Person         |
@@ -60,4 +60,4 @@ These MUST NOT be forced into schema.org.
 ## 6. Compliance
 
 Schema.org mapping is optional but recommended.
-BOM semantics must never be distorted to fit schema.org.
+IMM semantics must never be distorted to fit schema.org.

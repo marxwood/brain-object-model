@@ -2,17 +2,17 @@
 
 ## 1. Purpose
 
-This document defines alignment between Brain Object Model (BOM)
+This document defines alignment between Institutional Memory Model (IMM)
 and **W3C PROV-O** for interoperable provenance semantics.
 
 PROV-O is used to externalize **how knowledge was produced**,
-not to redefine BOM epistemology.
+not to redefine IMM epistemology.
 
 ---
 
 ## 2. Core Alignment
 
-| BOM Concept        | PROV-O Class / Property |
+| IMM Concept        | PROV-O Class / Property |
 |-------------------|-------------------------|
 | Provenance        | prov:Entity             |
 | Origin event      | prov:Activity           |
@@ -25,9 +25,9 @@ not to redefine BOM epistemology.
 
 ## 3. Mapping Rules
 
-- Every BOM Provenance MAY be serialized as a prov:Entity.
+- Every IMM Provenance MAY be serialized as a prov:Entity.
 - Origin activities MAY be serialized as prov:Activity.
-- BOM remains authoritative; PROV-O is representational.
+- IMM remains authoritative; PROV-O is representational.
 
 ---
 

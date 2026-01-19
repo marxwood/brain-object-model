@@ -2,10 +2,10 @@
 
 ## 1. Purpose
 
-This note defines how the **Brain Object Model (BOM)** is constrained by and compatible with the
+This note defines how the **Institutional Memory Model (IMM)** is constrained by and compatible with the
 **System Momentum Canon** and **ADR-0 (Epistemic Constraints)**.
 
-BOM is a **derivative runtime specification**.
+IMM is a **derivative runtime specification**.
 It does not create or modify canon. It implements canon constraints as enforceable structure.
 
 ---
@@ -13,16 +13,16 @@ It does not create or modify canon. It implements canon constraints as enforceab
 ## 2. Normative Relationship
 
 - **Canon / ADR-0 are authoritative.**
-- **BOM is subordinate.**
+- **IMM is subordinate.**
 - In any conflict, **Canon and ADR-0 prevail**.
 
-BOM must remain a reusable, replaceable derivative artifact.
+IMM must remain a reusable, replaceable derivative artifact.
 
 ---
 
 ## 3. ADR-0 Alignment Matrix
 
-| ADR-0 Constraint (Principle) | BOM Mechanism |
+| ADR-0 Constraint (Principle) | IMM Mechanism |
 |---|---|
 | Provenance required for actionable knowledge | `model/provenance.md` mandatory `origin` + `refs` |
 | Separate state from knowledge | `model/core/state.md` vs `model/core/fact.md` (Claim/Fact separation) |
@@ -39,7 +39,7 @@ BOM must remain a reusable, replaceable derivative artifact.
 
 ## 4. Non-Negotiable Invariants (Derived from ADR-0)
 
-An implementation claiming BOM compliance MUST enforce:
+An implementation claiming IMM compliance MUST enforce:
 
 1. **No write without provenance** for actionable objects.
 2. **No state stored as fact** without verification trace.
@@ -52,9 +52,9 @@ An implementation claiming BOM compliance MUST enforce:
 ## 5. Scope Guardrails
 
 This note does not define ADR-0.
-It only defines BOM’s conformance posture.
+It only defines IMM’s conformance posture.
 
-BOM MUST NOT:
+IMM MUST NOT:
 - redefine canon terms,
 - introduce moral or political truth rules,
 - encode ideology,
@@ -86,6 +86,6 @@ Typical compliance checks (examples):
 
 ## 8. Final Statement
 
-BOM exists to operationalize ADR-0 discipline in a portable, cross-LLM data contract.
+IMM exists to operationalize ADR-0 discipline in a portable, cross-LLM data contract.
 
 It is compliant by design only if implementations enforce its write rules and validity semantics.

@@ -1,6 +1,6 @@
-# Brain Object Model (BOM)
+# Institutional Memory Model (IMM)
 
-Brain Object Model (BOM) is a **specification-first epistemological model**
+Institutional Memory Model (IMM) is a **specification-first epistemological model**
 designed for AI agents and agentic systems.
 
 Its purpose is to prevent epistemic collapse by strictly separating:
@@ -8,7 +8,7 @@ Its purpose is to prevent epistemic collapse by strictly separating:
 - transient state from stable facts,
 - reasoning from decision-making authority.
 
-BOM is not a database schema, not an API, and not an ontology replacement.
+IMM is not a database schema, not an API, and not an ontology replacement.
 It is a **conceptual contract** that other systems may implement.
 
 ---
@@ -26,7 +26,7 @@ It is a **conceptual contract** that other systems may implement.
 ## Repository Structure
 
 ```
-brain-object-model/
+institutional-memory-model/
 ├── CHARTER.md
 ├── README.md
 ├── scope.md
@@ -43,7 +43,7 @@ brain-object-model/
 - Use `examples/fixtures/` for authoritative runtime payloads
 - Use `examples/projections/` for interoperability (JSON-LD)
 
-BOM-native structures are authoritative.
+IMM-native structures are authoritative.
 JSON-LD projections are lossy and non-authoritative.
 
 ---
@@ -55,7 +55,7 @@ This project aligns with:
 - PROV-O (provenance)
 - FOAF, SKOS, ODRL, DCMI (optional semantics)
 
-BOM semantics are never downgraded to fit an ontology.
+IMM semantics are never downgraded to fit an ontology.
 
 ---
 
@@ -69,11 +69,11 @@ Implementation is intentionally out of scope.
 
 ## Canon & ADR-0 Compatibility
 
-Brain Object Model is a **derivative specification** aligned with the
+Institutional Memory Model is a **derivative specification** aligned with the
 System Momentum Canon and constrained by **ADR-0 (Epistemic Constraints)**.
 
 - Canon and ADR-0 are authoritative.
-- BOM operationalizes these constraints as enforceable structure.
+- IMM operationalizes these constraints as enforceable structure.
 - In case of conflict, Canon and ADR-0 prevail.
 
 See: `governance/adr0-compatibility.md`

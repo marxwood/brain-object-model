@@ -2,7 +2,7 @@
 
 ## 1. Purpose
 
-Lifecycle defines the **allowed state transitions** for Brain Object Model objects.
+Lifecycle defines the **allowed state transitions** for Institutional Memory Model objects.
 It prevents silent mutation, resurrection of expired objects, and uncontrolled drift.
 
 Lifecycle is orthogonal to validity:
@@ -13,7 +13,7 @@ Lifecycle is orthogonal to validity:
 
 ## 2. Universal Lifecycle States
 
-All BOM objects MUST expose a lifecycle status:
+All IMM objects MUST expose a lifecycle status:
 
 - `created`
 - `active`

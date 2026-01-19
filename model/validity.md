@@ -11,7 +11,7 @@ Validity is a **lease**, not ownership.
 - Validity is **context-bound**, **time-bound**, and **revocable**.
 - Validity is the structural mechanism of **forgetting**.
 
-This document specifies lease semantics required for BOM-compliant systems.
+This document specifies lease semantics required for IMM-compliant systems.
 
 ---
 

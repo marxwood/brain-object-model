@@ -1,6 +1,6 @@
 # SHACL Constraints (Optional)
 
-This folder contains **optional SHACL shapes** for machine-checkable validation of BOM graphs.
+This folder contains **optional SHACL shapes** for machine-checkable validation of IMM graphs.
 
 ## What this is
 - Structural validation of object types, required fields, and enums.
@@ -8,11 +8,11 @@ This folder contains **optional SHACL shapes** for machine-checkable validation 
 
 ## What this is not
 - A truth engine.
-- A replacement for BOM write-rules enforcement.
+- A replacement for IMM write-rules enforcement.
 - A policy engine.
 
 ## Usage (typical)
-- Load `bom-shapes.ttl` into your SHACL validator.
+- Load `imm-shapes.ttl` into your SHACL validator.
 - Validate exported graphs or ingestion payloads before persistence.
 
 ## Notes

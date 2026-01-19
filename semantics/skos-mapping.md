@@ -3,7 +3,7 @@
 ## 1. Purpose
 
 This document defines how **SKOS** may be used
-to represent controlled vocabularies inside BOM.
+to represent controlled vocabularies inside IMM.
 
 SKOS is used for **labels**, not for reasoning.
 
@@ -11,7 +11,7 @@ SKOS is used for **labels**, not for reasoning.
 
 ## 2. Core Alignment
 
-| BOM Concept | SKOS Property |
+| IMM Concept | SKOS Property |
 |------------|---------------|
 | Concept    | skos:Concept  |
 | label      | skos:prefLabel |

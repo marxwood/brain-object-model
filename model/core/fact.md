@@ -2,7 +2,7 @@
 
 ## 1. Purpose
 
-This document defines the distinction between **Claim** and **Fact** within the Brain Object Model (BOM).
+This document defines the distinction between **Claim** and **Fact** within the Institutional Memory Model (IMM).
 
 The separation exists to prevent:
 
@@ -76,7 +76,7 @@ Verification is an explicit process that may involve:
 - formal review or decision,
 - automated checks with human oversight.
 
-The verification mechanism itself is **out of scope** for BOM,
+The verification mechanism itself is **out of scope** for IMM,
 but its result and trace are not.
 
 ---

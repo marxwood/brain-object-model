@@ -2,7 +2,7 @@
 
 ## 1. Purpose
 
-Write Rules define **hard rejection criteria** for Brain Object Model writes.
+Write Rules define **hard rejection criteria** for Institutional Memory Model writes.
 They are enforced at ingress.
 
 ---

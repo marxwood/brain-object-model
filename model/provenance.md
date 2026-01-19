@@ -4,7 +4,7 @@
 
 Provenance defines **where information comes from**, **how it was produced**, and **what evidence supports it**.
 
-In the Brain Object Model (BOM), provenance is mandatory for:
+In the Institutional Memory Model (IMM), provenance is mandatory for:
 
 - State Assertions
 - Facts / Claims
@@ -93,7 +93,7 @@ Examples:
 - ipfs:QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco
 - arango:collection/episodes/987654
 
-The BOM does not define dereferencing logic.
+The IMM does not define dereferencing logic.
 
 ---
 

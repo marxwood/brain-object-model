@@ -3,18 +3,18 @@
 This directory contains two **purpose-driven** sets of examples.
 
 ## 1) `fixtures/` — Runtime examples (authoritative)
-These files are **Brain Object Model (BOM) native payloads** intended for:
+These files are **Institutional Memory Model (IMM) native payloads** intended for:
 - storage / APIs (e.g., `/brain/write`)
 - test vectors / fixtures
 - reference examples for implementation
 
-They may include BOM-only semantics such as:
+They may include IMM-only semantics such as:
 - validity leases
 - verification traces (Claim → Fact)
 - explicit conflict objects
 - provenance fields
 
-These files are **authoritative** examples of the BOM shape.
+These files are **authoritative** examples of the IMM shape.
 
 ## 2) `projections/` — Interoperability examples (lossy)
 These files are **JSON-LD interoperability projections** intended for:
@@ -23,7 +23,7 @@ These files are **JSON-LD interoperability projections** intended for:
 - provenance interoperability (PROV-O where applicable)
 
 These are **lossy by design**:
-- they must not be used to reconstruct full BOM semantics
+- they must not be used to reconstruct full IMM semantics
 - they do not encode validity leases, lifecycle, or full verification
 
 ### Quick rule

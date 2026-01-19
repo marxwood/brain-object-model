@@ -2,7 +2,7 @@
 
 ## 1. Purpose
 
-This document defines alignment between Brain Object Model (BOM)
+This document defines alignment between Institutional Memory Model (IMM)
 and **Dublin Core (DCMI)** for descriptive metadata.
 
 DCMI is used for **cataloging and discovery**, not reasoning.
@@ -11,7 +11,7 @@ DCMI is used for **cataloging and discovery**, not reasoning.
 
 ## 2. Core Alignment
 
-| BOM Concept | DCMI Property |
+| IMM Concept | DCMI Property |
 |------------|----------------|
 | title      | dc:title       |
 | description| dc:description |

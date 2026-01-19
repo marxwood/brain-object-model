@@ -2,7 +2,7 @@
 
 ## 1. Purpose
 
-This document defines optional alignment between BOM agents
+This document defines optional alignment between IMM agents
 and **FOAF** vocabulary.
 
 FOAF is used to describe **who**, not authority or truth.
@@ -11,7 +11,7 @@ FOAF is used to describe **who**, not authority or truth.
 
 ## 2. Core Alignment
 
-| BOM Concept | FOAF Class |
+| IMM Concept | FOAF Class |
 |------------|------------|
 | Person     | foaf:Person |
 | Agent      | foaf:Agent  |
